@@ -28,6 +28,7 @@
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html-nosvg": "^1.1.1",
     "jq-accordion": "^1.0.3",
-    "sass": "^1.52.3"
+    "sass": "^1.52.3",
+    "slick-carousel": "^1.8.1"
   }
 }

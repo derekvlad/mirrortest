@@ -12,7 +12,7 @@
     &__wrapper {
         box-shadow: 19px 0px 21px rgba(0, 0, 0, 0.08);
         max-width: 100%;
-        border-radius: 20px;
+        border-radius: 9px;
         background-color: #fff;
         display: flex;
 
@@ -21,7 +21,7 @@
     &__list {
         background: #FFFFFF;
         box-shadow: 19px 0px 21px rgba(0, 0, 0, 0.08);
-        border-radius: 20px;
+        border-radius: 9px;
         max-width: 320px;
         flex: 1;
 
@@ -214,7 +214,7 @@ li.menu-catalog__list-title {
     width: 200px;
     background-image: url(../images/disco-bg.png);
     background-repeat: no-repeat;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 9px 9px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

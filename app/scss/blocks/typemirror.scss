@@ -1,0 +1,54 @@
+.type-mirror {
+    padding-bottom: 200px;
+    background: linear-gradient(251.92deg, #F5F5F5 37.69%, #EDEDED 84.34%);
+    &__btn-tabs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn-tab {
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+    }
+
+    &__title-tab {
+        @extend %montserrat-400;
+        font-size: 36px;
+        line-height: 54px;
+        color: #989898;
+        margin-right: 20px;
+    }
+
+    &__num-tab {
+        @extend %opensans-400;
+        font-size: 20px;
+        line-height: 43px;
+        color: #989898;
+    }
+    &__items-tab{
+        position: relative;
+    
+    }
+    &__item-tab {
+        top: 15px;
+        position: absolute;
+        pointer-events: none;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+    }
+}
+
+.type-mirror__btn-tab.active>.type-mirror__title-tab {
+    color: #413239;
+
+}
+
+.type-mirror__item-tab.active {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}

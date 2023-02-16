@@ -42,7 +42,7 @@ function styles() {
     return src([
         'app/scss/style.scss',
     ])
-        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(scss({ outputStyle: 'expanded' }))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 versions'],
@@ -56,11 +56,40 @@ function styles() {
 
 
 }
+function stylesBuild(){
+    return src([
+        'app/scss/style.scss',
+    ])
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(concat('style.min.css'))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 10 versions'],
+            grid: true
+        }))
+        
+        .pipe(dest('app/css'))
+        .pipe(dest('dist/css'))
+        
+   
+}
 
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/jq-accordion/src/js/jquery.accordion.js',
+        'node_modules/slick-carousel/slick/slick.js',
+        'app/js/main.js',
+        'app/js/slide-owerlay.js',
+
+    ])
+        .pipe(concat('main.min.js'))
+        
+        .pipe(dest('app/js'))
+        .pipe(dest('dist/js'))
+}
+function scriptsBuild() {
+    return src([
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.js',
         'app/js/main.js',
 
     ])
@@ -69,7 +98,6 @@ function scripts() {
         .pipe(dest('app/js'))
         .pipe(dest('dist/js'))
 }
-
 
 function imagesbuild() {
     return src('app/images/**/*.*')
